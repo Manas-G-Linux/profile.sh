@@ -10,7 +10,8 @@ echo Downloading profile files...
 FILES=(.bashrc .vimrc .bash_aliases .toprc .screenrc .profile)
 for FILE in ${FILES[@]}
 do
-	echo wget "$URL$FILE?raw=true" -O $FILE -q
+{	echo wget "$URL$FILE?raw=true" -O $FILE -q
+}
 	#if [ -e $FILE ] 
 	#echo Downloaded $FILE to $WRKDIR... 
 	#then
@@ -23,6 +24,6 @@ do
 #	fi
 #	echo Done...
 done
-cd
+cd..
 #dircolors -p > .dircolors
 #. .bashrc
